@@ -36,7 +36,19 @@ Abre `contenido.js` y busca la palabra **PENDIENTE** (Ctrl/Cmd + F). Lo principa
 
 Consejo: antes de subir los PDF, quita del CV datos que no quieras públicos (DNI, dirección exacta, fecha de nacimiento).
 
-## Publicarla gratis en internet
+## Web publicada
+
+**https://luiscresola.github.io/portafolio/** (GitHub Pages, repositorio `luiscresola/portafolio`)
+
+Para actualizarla después de editar:
+1. Guarda los cambios.
+2. En VS Code, abre el panel **Control de código fuente** (icono de ramas, `Ctrl+Mayús+G`).
+3. Escribe un mensaje corto (p. ej. "Actualizo experiencia") y pulsa **Confirmar** → **Sincronizar cambios**.
+4. En 1-2 minutos la web pública se actualiza sola.
+
+> El repositorio es público: todo lo que pongas en esta carpeta (incluidos los PDF) será visible en internet.
+
+## Otras formas de publicarla
 
 **Opción rápida: Netlify Drop**
 Entra en `app.netlify.com/drop`, arrastra la carpeta `portafolio` y en segundos tienes una dirección pública. Puedes cambiarle el nombre (p. ej. `luiscarlos.netlify.app`).
