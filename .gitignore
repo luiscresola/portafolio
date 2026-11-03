@@ -1,0 +1,8 @@
+# Archivos de Windows / OneDrive que no deben publicarse
+desktop.ini
+Thumbs.db
+~$*
+
+# Ajustes locales de VS Code (se mantiene extensions.json)
+.vscode/*
+!.vscode/extensions.json
