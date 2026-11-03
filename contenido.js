@@ -86,7 +86,7 @@ window.PORTFOLIO = {
   },
 
   /* ---------- CV principal (botón grande de la tarjeta de perfil) ---------- */
-  cvPrincipal: "documentos/cv-luis-carlos.pdf",
+  cvPrincipal: "documentos/cv-luis-carlos-resola-medina.pdf",
 
   /* ---------- Cómo trabajo ----------
      Cuatro principios, numerados en orden (01, 02...).
@@ -224,7 +224,7 @@ window.PORTFOLIO = {
 
   /* ---------- Documentos descargables ---------- */
   documentos: [
-    { titulo: "Currículum · Project Management | Técnico emergencias", tipo: "CV", idioma: "ES", archivo: "documentos/cv-luis-carlos.pdf" },
+    { titulo: "Currículum · Project Management | Técnico emergencias", tipo: "CV", idioma: "ES", archivo: "documentos/cv-luis-carlos-resola-medina.pdf" },
     { titulo: "Carta de recomendación · Edgar Nolla", tipo: "Carta", idioma: "CA", archivo: "documentos/carta-edgar-nolla.pdf" },
     { titulo: "Carta de recomendación · Edgar Nolla (traducción)", tipo: "Carta", idioma: "ES", archivo: "documentos/carta-edgar-nolla-es.pdf" }
   ],
