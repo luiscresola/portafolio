@@ -114,7 +114,7 @@ window.PORTFOLIO = {
     {
       icono: "birrete",
       titulo: "Formar al equipo",
-      texto: "Contribuyo a que cada profesional esté preparado para actuar con seguridad y criterio, aplicando mi experiencia como instructor de SVB/DESA y de control de hemorragias.",
+      texto: "Contribuyo a que cada profesional esté preparado para actuar con seguridad y criterio.",
       lema: "Un equipo formado es un equipo que responde."
     }
   ],
