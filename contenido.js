@@ -96,25 +96,25 @@ window.PORTFOLIO = {
     {
       icono: "ruta",
       titulo: "Planificar antes de desplegar",
-      texto: "Analizo las necesidades de cada servicio antes de movilizar recursos y dimensiono el personal, el material y la logística que requiere. Aplico el mismo enfoque técnico-económico en la preparación de licitaciones.",
+      texto: "Antes de movilizar recursos, analizo las necesidades de cada servicio y dimensiono el personal, el material y la logística que requiere, con criterio técnico y económico.",
       lema: "Un buen dispositivo se decide antes de llegar al terreno."
     },
     {
       icono: "radio",
       titulo: "Coordinar sobre el terreno",
-      texto: "Dirijo la operativa en tiempo real en grandes eventos y servicios de alta demanda, como el Circuit de Catalunya o los partidos del Girona FC: asignación de recursos, toma de decisiones y comunicación constante con el equipo y con el cliente.",
+      texto: "Dirijo la operativa en tiempo real: asignación de recursos, toma de decisiones y comunicación constante con el equipo y con el cliente, adaptando el dispositivo a lo que exige cada situación.",
       lema: "Liderazgo en primera línea y decisiones a tiempo."
     },
     {
       icono: "registro",
       titulo: "Registrar para mejorar",
-      texto: "Documento las incidencias de cada jornada y las analizo para identificar oportunidades de mejora en los procesos. En los aeropuertos de AENA, este registro diario garantizaba la trazabilidad y la continuidad del servicio.",
+      texto: "Documento las incidencias de cada jornada y las analizo para identificar oportunidades de mejora en los procesos, garantizando la trazabilidad y la continuidad del servicio.",
       lema: "Lo que se registra, se puede mejorar."
     },
     {
       icono: "birrete",
       titulo: "Formar al equipo",
-      texto: "Como instructor de SVB/DESA y de control de hemorragias, y miembro del equipo docente, contribuyo a que cada profesional esté preparado para actuar con seguridad y criterio.",
+      texto: "Contribuyo a que cada profesional esté preparado para actuar con seguridad y criterio, aplicando mi experiencia como instructor de SVB/DESA y de control de hemorragias.",
       lema: "Un equipo formado es un equipo que responde."
     }
   ],
