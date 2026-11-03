@@ -97,7 +97,7 @@ window.PORTFOLIO = {
       "Gestión de operaciones, equipos y recursos",
       "Formación en SVB/DESA y control de hemorragias"
     ],
-    zona: "Girona y Baix Empordà · Presencial"
+    zona: "Girona y Baix Empordà · Presencial · Carnet B y vehículo propio"
   },
 
   /* ---------- Experiencia (de más reciente a más antigua) ----------
@@ -138,9 +138,9 @@ window.PORTFOLIO = {
       periodo: "Finalización 2026"
     },
     {
-      titulo: "Grado en Física",
+      titulo: "Estudios de Grado en Física",
       centro: "Universidad de Córdoba",
-      periodo: "Pendiente de cierre de expediente"
+      periodo: ""
     },
     {
       titulo: "Técnico en Emergencias Sanitarias (TES)",
@@ -196,16 +196,20 @@ window.PORTFOLIO = {
   ],
 
   /* ---------- Áreas de experiencia ----------
-     iconos disponibles: radio, ambulancia, escudo, enlace, equipo,
-     corazon, grafica, olas, birrete, maletin                         */
+     iconos disponibles: radio, ambulancia, escudo, enlace, equipo, corazon,
+     grafica, olas, birrete, maletin, archivo, avion                   */
   areas: [
     { icono: "radio",      nombre: "Coordinación operativa" },
+    { icono: "escudo",     nombre: "Grandes eventos y dispositivos preventivos" },
     { icono: "ambulancia", nombre: "Transporte sanitario" },
-    { icono: "escudo",     nombre: "Servicios preventivos" },
-    { icono: "enlace",     nombre: "Mutuas y clientes" },
-    { icono: "equipo",     nombre: "Equipos y turnos" },
-    { icono: "corazon",    nombre: "Soporte vital básico" },
-    { icono: "grafica",    nombre: "Gestión empresarial" },
-    { icono: "olas",       nombre: "Servicios acuáticos" }
-  ]
+    { icono: "equipo",     nombre: "Gestión de equipos y recursos" },
+    { icono: "grafica",    nombre: "Mejora de procesos" },
+    { icono: "archivo",    nombre: "Licitaciones y análisis técnico-económico" },
+    { icono: "birrete",    nombre: "Formación y docencia" },
+    { icono: "corazon",    nombre: "Soporte vital y trauma" }
+  ],
+
+  /* ---------- Herramientas (etiquetas debajo de Idiomas) ----------
+     Lista vacía [] = no se muestra el bloque.                         */
+  herramientas: ["Excel avanzado", "Google Analytics"]
 };

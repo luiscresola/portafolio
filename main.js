@@ -178,6 +178,15 @@
     $("[data-idiomas-bloque]").hidden = true;
   }
 
+  var herramientas = D.herramientas || [];
+  if (herramientas.length) {
+    $("[data-herramientas]").innerHTML = herramientas.map(function (h) {
+      return '<li class="chip">' + esc(h) + "</li>";
+    }).join("");
+  } else {
+    $("[data-herramientas-bloque]").hidden = true;
+  }
+
   /* ---------- cartas (carrusel) ---------- */
   var cartas = D.cartas || [];
   var carrusel = $("#carrusel");

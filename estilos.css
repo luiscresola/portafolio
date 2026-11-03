@@ -408,6 +408,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
   padding: 8px 10px; border-radius: 8px; border: 1px solid var(--linea); font-size: .9rem;
 }
+.herramientas { display: flex; flex-wrap: wrap; gap: 8px; }
+.herramientas .chip {
+  background: var(--superficie); border: 1px solid var(--linea); color: var(--tinta);
+  padding: 8px 10px; font-size: .72rem;
+}
 .idiomas__nombre { font-weight: 600; }
 .idiomas__nivel { font: 400 .7rem/1 var(--f-mono); color: var(--tinta-suave); text-transform: uppercase; letter-spacing: .04em; }
 
