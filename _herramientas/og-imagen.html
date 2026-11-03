@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Imagen para compartir</title>
+<!--
+  Plantilla de la imagen que aparece al compartir la web en LinkedIn, WhatsApp...
+  Tamaño: 1200 × 630 px. Resultado: assets/og-imagen.jpg
+
+  Esta carpeta empieza por "_", así que GitHub Pages no la publica:
+  solo sirve para volver a generar la imagen si cambias el titular.
+  (Pídeselo a Claude, o abre este archivo en Chrome a 1200 × 630 y haz una captura.)
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@500;600&display=block">
+<style>
+  :root {
+    --fondo: #0a1316; --linea: #23363c; --texto: #e6eef0; --suave: #93a5aa;
+    --petroleo: #4cc3b6; --petroleo-oscuro: #0b6a63; --senal: #f5c518; --senal-tinta: #1b1600;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    display: grid; grid-template-columns: 450px 14px 1fr;
+    background:
+      radial-gradient(760px 460px at 100% 0%, rgba(11, 106, 99, .42), transparent 62%),
+      var(--fondo);
+    color: var(--texto); font-family: "Public Sans", sans-serif;
+  }
+  .foto img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+
+  /* franja de librea, como en la web y en las ambulancias */
+  .librea {
+    background:
+      repeating-linear-gradient(180deg, var(--senal) 0 14px, var(--petroleo-oscuro) 14px 28px) 0 0 / 7px 100% no-repeat,
+      repeating-linear-gradient(180deg, var(--petroleo-oscuro) 0 14px, var(--senal) 14px 28px) 7px 0 / 7px 100% no-repeat;
+  }
+
+  .info { display: flex; flex-direction: column; padding: 52px 56px 50px 56px; min-width: 0; }
+  .marca {
+    display: flex; align-items: center; gap: 16px;
+    font: 500 16px/1 "IBM Plex Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--suave);
+  }
+  .mono {
+    display: grid; place-items: center; width: 54px; height: 54px; border-radius: 10px;
+    background: var(--senal); color: var(--senal-tinta);
+    font: 700 29px/1 "Barlow Condensed", sans-serif; letter-spacing: .02em;
+  }
+  h1 {
+    margin-top: 30px;
+    font: 700 90px/.93 "Barlow Condensed", sans-serif; letter-spacing: .01em; text-transform: uppercase;
+  }
+  .barra { width: 72px; height: 5px; border-radius: 3px; background: var(--senal); margin: 26px 0 20px; }
+  .titular {
+    font: 600 36px/1 "Barlow Condensed", sans-serif; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--senal);
+  }
+  .roles { margin-top: 12px; font: 500 23px/1.38 "Public Sans", sans-serif; color: var(--texto); }
+  .hitos { margin-top: 16px; font: 500 19px/1.4 "Public Sans", sans-serif; color: var(--suave); }
+  .sello {
+    margin-top: auto; align-self: flex-start;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 11px 16px; border-radius: 9px;
+    border: 1px solid rgba(76, 195, 182, .45); background: rgba(76, 195, 182, .10);
+    font: 600 20px/1 "Public Sans", sans-serif; color: var(--petroleo);
+  }
+  .sello svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+</head>
+<body>
+  <div class="foto"><img src="../assets/foto.jpg" alt=""></div>
+  <div class="librea"></div>
+  <div class="info">
+    <div class="marca"><span class="mono">LC</span>Calonge · Girona</div>
+    <h1>Luis Carlos<br>Resola Medina</h1>
+    <div class="barra"></div>
+    <p class="titular">Project Management</p>
+    <p class="roles">Técnico en Emergencias Sanitarias<br>Instructor de SVB/DESA y control de hemorragias</p>
+    <p class="hitos">Circuit de Catalunya · AENA · Girona FC · Bàsquet Girona</p>
+    <span class="sello"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Coordinando equipos y dispositivos desde 2017</span>
+  </div>
+</body>
+</html>

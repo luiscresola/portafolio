@@ -82,6 +82,24 @@
     $("[data-nav-proyectos]").hidden = true;
   }
 
+  /* ---------- cómo trabajo ---------- */
+  var metodo = D.metodo || [];
+  if (metodo.length) {
+    $("[data-metodo]").innerHTML = metodo.map(function (m, i) {
+      return '<li class="metodo__item">' +
+        '<div class="metodo__cab">' +
+          '<span class="metodo__ico">' + icono(m.icono || "check") + "</span>" +
+          '<span class="metodo__num" aria-hidden="true">' + ("0" + (i + 1)).slice(-2) + "</span>" +
+        "</div>" +
+        '<h3 class="metodo__tit">' + esc(m.titulo) + "</h3>" +
+        (m.texto ? '<p class="metodo__txt">' + esc(m.texto) + "</p>" : "") +
+        (m.lema ? '<p class="metodo__lema">' + esc(m.lema) + "</p>" : "") +
+        "</li>";
+    }).join("");
+  } else {
+    $("#metodo").hidden = true;
+  }
+
   /* ---------- experiencia ---------- */
   var exp = D.experiencia || [];
   var visibles = D.experienciaVisible || exp.length;
@@ -90,6 +108,14 @@
     return m ? Math.min(min, +m[0]) : min;
   }, Infinity);
   if (isFinite(anioInicio)) setTexto("[data-anios]", "Desde " + anioInicio);
+
+  /* pie de página: eslogan con los años calculados solos */
+  var lemaPie = $("[data-pie-lema]");
+  if (D.pie && isFinite(anioInicio)) {
+    lemaPie.textContent = String(D.pie).replace("{anios}", new Date().getFullYear() - anioInicio);
+  } else {
+    lemaPie.hidden = true;
+  }
 
   $("[data-experiencia]").innerHTML = exp.map(function (e, i) {
     var actual = /actualidad/i.test(e.periodo || "");
@@ -303,4 +329,45 @@
     if (!nav.contains(e.target) && !menuBtn.contains(e.target)) cerrarMenu();
   });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") cerrarMenu(); });
+
+  /* ---------- menú: marca la sección que se está viendo ---------- */
+  var cabecera = $(".cabecera");
+  var objetivos = $$("a[href^='#']", nav).map(function (a) {
+    return { enlace: a, seccion: document.getElementById(a.getAttribute("href").slice(1)) };
+  }).filter(function (o) { return o.seccion; });
+  var ultimaSeccion = objetivos.reduce(function (ult, o) {
+    return !ult || (ult.seccion.compareDocumentPosition(o.seccion) & Node.DOCUMENT_POSITION_FOLLOWING) ? o : ult;
+  }, null);
+  var marcado = null;
+  function marcarSeccion() {
+    var linea = cabecera.offsetHeight + window.innerHeight * 0.3;
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    var alFinal = y > 0 && window.innerHeight + y >= document.documentElement.scrollHeight - 4;
+    var activo = null;
+    if (alFinal) {
+      activo = ultimaSeccion;
+    } else {
+      objetivos.forEach(function (o) {
+        if (o.seccion.hidden) return;
+        var r = o.seccion.getBoundingClientRect();
+        if (r.top <= linea && r.bottom > linea) activo = o;
+      });
+    }
+    if (activo === marcado) return;
+    objetivos.forEach(function (o) {
+      var on = o === activo;
+      o.enlace.classList.toggle("activo", on);
+      if (on) o.enlace.setAttribute("aria-current", "true"); else o.enlace.removeAttribute("aria-current");
+    });
+    marcado = activo;
+  }
+  var pendiente = false;
+  function alMoverse() {
+    if (pendiente) return;
+    pendiente = true;
+    window.requestAnimationFrame(function () { pendiente = false; marcarSeccion(); });
+  }
+  window.addEventListener("scroll", alMoverse, { passive: true });
+  window.addEventListener("resize", alMoverse);
+  marcarSeccion();
 })();

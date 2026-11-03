@@ -136,6 +136,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .nav a:hover { background: var(--superficie-2); }
 .nav .nav__cta { background: var(--tinta); color: var(--superficie); margin-left: 6px; }
 .nav .nav__cta:hover { background: var(--tinta); opacity: .88; }
+/* sección que se está viendo */
+.nav a.activo { background: var(--superficie-2); box-shadow: inset 0 -2px 0 var(--senal); }
+.nav .nav__cta.activo { background: var(--tinta); box-shadow: inset 0 -3px 0 var(--senal); }
 
 .menu-btn {
   display: none; margin-left: auto; width: 42px; height: 42px; border-radius: 10px;
@@ -168,6 +171,24 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .nav.abierto { opacity: 1; transform: none; pointer-events: auto; visibility: visible; }
   .nav a { padding: 11px 12px; font-size: var(--t-m); }
   .nav .nav__cta { margin: 6px 0 0; text-align: center; }
+  .nav a.activo, .nav .nav__cta.activo { box-shadow: inset 3px 0 0 var(--senal); }
+}
+
+/* Cabecera con el menú plegado: el subtítulo puede ocupar dos líneas */
+@media (max-width: 860px) and (min-width: 561px) {
+  .marca__sub { white-space: normal; text-wrap: balance; }
+}
+/* Móvil: solo el nombre, en una o dos líneas.
+   El titular completo se lee justo debajo, en la ficha personal. */
+@media (max-width: 560px) {
+  .cabecera__in { gap: 10px; }
+  .marca { gap: 10px; }
+  .marca__mono { width: 36px; height: 36px; font-size: 1.1rem; }
+  .marca__nombre {
+    white-space: normal; text-wrap: balance;
+    font-size: 1.05rem; line-height: 1.1; letter-spacing: .08em;
+  }
+  .marca__sub { display: none; }
 }
 
 /* ---------- Estructura ---------- */
@@ -316,6 +337,32 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-size: var(--t-s); color: var(--tinta-suave);
 }
 .proyecto__num { font: 700 1.9rem/1 var(--f-display); color: var(--tinta); }
+
+/* ---------- Cómo trabajo ---------- */
+.metodo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 680px) { .metodo { grid-template-columns: minmax(0, 1fr); } }
+.metodo__item {
+  display: grid; gap: 10px; align-content: start; min-width: 0;
+  padding: 18px; border-radius: var(--r-peq);
+  background: var(--superficie-2); border: 1px solid var(--linea);
+}
+.metodo__cab { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.metodo__ico {
+  display: grid; place-items: center; width: 40px; height: 40px; flex: none;
+  border-radius: 10px; font-size: 1.2rem; color: var(--petroleo);
+  background: color-mix(in srgb, var(--petroleo) 13%, var(--superficie));
+  border: 1px solid color-mix(in srgb, var(--petroleo) 28%, transparent);
+}
+.metodo__num {
+  font: 500 var(--t-xs)/1 var(--f-mono); letter-spacing: .1em; color: var(--tinta-suave);
+  font-variant-numeric: tabular-nums;
+}
+.metodo__tit { font: 700 1.25rem/1.15 var(--f-display); letter-spacing: .02em; text-transform: uppercase; }
+.metodo__txt { color: var(--tinta-suave); font-size: .93rem; }
+.metodo__lema {
+  margin-top: 2px; padding-left: 12px; border-left: 3px solid var(--senal);
+  font-style: italic; font-weight: 600; font-size: .92rem; line-height: 1.45; color: var(--tinta);
+}
 
 /* ---------- Experiencia ---------- */
 .linea { display: grid; gap: 0; position: relative; }
@@ -508,6 +555,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font: 400 var(--t-xs)/1.5 var(--f-mono); letter-spacing: .04em;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.pie__lema {
+  margin-bottom: 4px; color: var(--tinta); font-weight: 500;
+  text-transform: uppercase; letter-spacing: .08em;
 }
 
 /* ---------- Movimiento reducido ---------- */

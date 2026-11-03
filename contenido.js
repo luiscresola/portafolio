@@ -21,6 +21,9 @@ window.PORTFOLIO = {
   coordenadas: "41.86° N · 3.08° E",
   foto: "assets/foto.jpg",       // Pon tu foto con este nombre (cuadrada o vertical)
 
+  // Frase del pie de página. {anios} se sustituye solo por los años desde tu primer puesto.
+  pie: "+{anios} años coordinando equipos y dispositivos de emergencias",
+
   // Cada elemento es un párrafo. Puedes usar <strong> para resaltar.
   bio: [
     "Profesional del sector sanitario especializado en <strong>coordinación operativa y gestión de proyectos</strong>. Desde 2017 planifico y superviso equipos, recursos y dispositivos: de servicios acuáticos a grandes eventos como el Circuit de Catalunya, y hoy como <strong>supervisor de zona en Falck</strong>.",
@@ -84,6 +87,37 @@ window.PORTFOLIO = {
 
   /* ---------- CV principal (botón grande de la tarjeta de perfil) ---------- */
   cvPrincipal: "documentos/cv-luis-carlos.pdf",
+
+  /* ---------- Cómo trabajo ----------
+     Cuatro principios, numerados en orden (01, 02...).
+     icono: ruta, radio, registro, birrete, equipo, escudo, corazon...
+     lema: frase corta destacada al pie de cada tarjeta.               */
+  metodo: [
+    {
+      icono: "ruta",
+      titulo: "Planificar antes de desplegar",
+      texto: "Analizo las necesidades de cada servicio antes de movilizar recursos y dimensiono el personal, el material y la logística que requiere. Aplico el mismo enfoque técnico-económico en la preparación de licitaciones.",
+      lema: "Un buen dispositivo se decide antes de llegar al terreno."
+    },
+    {
+      icono: "radio",
+      titulo: "Coordinar sobre el terreno",
+      texto: "Dirijo la operativa en tiempo real en grandes eventos y servicios de alta demanda, como el Circuit de Catalunya o los partidos del Girona FC: asignación de recursos, toma de decisiones y comunicación constante con el equipo y con el cliente.",
+      lema: "Liderazgo en primera línea y decisiones a tiempo."
+    },
+    {
+      icono: "registro",
+      titulo: "Registrar para mejorar",
+      texto: "Documento las incidencias de cada jornada y las analizo para identificar oportunidades de mejora en los procesos. En los aeropuertos de AENA, este registro diario garantizaba la trazabilidad y la continuidad del servicio.",
+      lema: "Lo que se registra, se puede mejorar."
+    },
+    {
+      icono: "birrete",
+      titulo: "Formar al equipo",
+      texto: "Como instructor de SVB/DESA y de control de hemorragias, y miembro del equipo docente, contribuyo a que cada profesional esté preparado para actuar con seguridad y criterio.",
+      lema: "Un equipo formado es un equipo que responde."
+    }
+  ],
 
   /* ---------- Disponibilidad ----------
      Pon visible: false si no quieres que se vea este bloque

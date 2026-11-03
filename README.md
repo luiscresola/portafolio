@@ -11,9 +11,15 @@ portafolio/
 ├── main.js          ← lógica (carrusel, menú, copiar email…)
 ├── contenido.js     ← ✏️ TODOS LOS TEXTOS Y DATOS. Edita aquí.
 ├── assets/
-│   └── foto.jpg     ← pon aquí tu foto con este nombre
-└── documentos/      ← pon aquí los PDF (CV, cartas, títulos)
+│   ├── foto.jpg     ← pon aquí tu foto con este nombre
+│   └── og-imagen.jpg ← imagen que sale al compartir el enlace (1200 × 630)
+├── documentos/      ← pon aquí los PDF (CV, cartas, títulos)
+└── _herramientas/
+    └── og-imagen.html ← plantilla de og-imagen.jpg (no se publica: empieza por "_")
 ```
+
+> Si cambias el titular, la imagen para compartir y los datos para Google
+> (`index.html`, bloque `application/ld+json`) no se actualizan solos.
 
 ## Trabajar con Visual Studio Code
 
